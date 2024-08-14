@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Contact Management System
 
-Currently, two official plugins are available:
+A React application for managing contacts with features like adding, editing, and viewing contacts. The application also includes a dashboard with visualizations and a map to display COVID-19 statistics.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Contact Management**: Add, edit, and view contacts.
+- **Dashboard**: Visualize COVID-19 data with a line chart showing cases, deaths, and recoveries.
+- **Map**: Display COVID-19 data on a map with markers for each country.
+- **Loading Animation**: Pac-Man loader animation displayed during initial loading.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: JavaScript library for building user interfaces.
+- **React Router**: For handling routing within the application.
+- **Chart.js**: For creating interactive charts.
+- **Leaflet**: For displaying maps and markers.
+- **React Query**: For data fetching and caching.
+- **React Spinners**: For displaying loading animations.
+- **Tailwind CSS**: For styling and layout.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kanhaiya8608/taiyo_assess.git
+   cd taiyo_assess
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Create a `.env` file in the root directory with the following variables:
+   ```env
+   VITE_API_URL=https://disease.sh/v3/covid-19
+   ```
+
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+
+## Usage
+
+- **Home Page**: Lists all contacts with options to add or edit.
+- **Add Contact**: Navigate to `/add` to add a new contact.
+- **Edit Contact**: Navigate to `/edit/:id` to edit an existing contact.
+- **Dashboard**: Navigate to `/dashboard` to view COVID-19 statistics.
+
+## Components
+
+- **Navbar**: Navigation bar for routing between pages.
+- **ContactList**: Displays a list of contacts.
+- **ContactForm**: Form for adding or editing contacts.
+- **Dashboard**: Displays charts and maps for COVID-19 data.
+- **CovidMap**: Map showing COVID-19 data for different countries.
+
+## Environment Variables
+
+- **VITE_API_URL**: The base URL for API requests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Feel free to open issues or submit pull requests for improvements or bug fixes. Contributions are welcome!
+
+## Contact
+
+For questions or feedback, please contact [kanhaiya831998@gmail.com](mailto:kanhaiya831998@gmail.com).
+
