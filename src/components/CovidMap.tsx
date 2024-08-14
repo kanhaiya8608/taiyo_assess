@@ -5,7 +5,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useQuery } from '@tanstack/react-query';
 import { ClipLoader } from 'react-spinners';
-import { CountryData } from '../models/countryData';
+import { CountryData } from '../models/CountryData';
 
 const fetchCountryData = async (): Promise<CountryData[]> => {
   const response = await axios.get<CountryData[]>(`${import.meta.env.VITE_API_URL}/countries`);
